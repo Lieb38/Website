@@ -3,10 +3,12 @@
     margin: 0;
   }
 
-h1 {
-  color: rgb(46, 70, 2);
+.columna h1 {
+  color: rgb(226, 252, 178);
   text-shadow: 3px 3px 3px greenyellow;
-  padding: 10%;
+  padding : 15%;
+  font-size: 2em;
+  transform: rotate(25deg);
  
 }
 
@@ -14,7 +16,7 @@ header h1 {
   font-size: 18px;
 }
 body {
-  background-color: whitesmoke ;
+  background-color: rgb(176, 187, 165) ;
   font-family: Georgia, Times, 'Times New Roman', serif;
   font-size: 12px;
   line-height: 1.6;
@@ -29,11 +31,11 @@ body {
     top: 0;
     float: left;
     width: 20%;
-    background-color: rgb(7, 141, 34);
-    border-right: 2px solid darkcyan;
+    background-color: rgb(121, 155, 116);
+    border-right: 2px solid rgb(7, 14, 14);
     min-height: 100vh;
     z-index: 100;
-    box-shadow: 4px 0px 25px 1px rgba(7, 63, 0, 0.514) ;
+    box-shadow: 4px 0px 25px 1px rgba(63, 28, 0, 0.815) ;
   }
   .columnb {
     float: left;
@@ -139,28 +141,36 @@ label {
     margin: auto;
     margin-top: 20px;
     padding: 20px;
+    font-size: 2em;
+    color: rgb(65, 65, 65);
 }
 form {
     text-align: center;
-    border: 1px solid rgb(42, 134, 81);
+    border: 2px solid rgb(6, 15, 10);
     border-radius: 5px;
     padding: 20px;
     margin: auto;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    width: 50%;
-    min-width: 300px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 95%;
+    min-width: 500px;
     box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.486);
-    background-color: rgb(143, 132, 68);
+    background-color: rgb(220, 238, 220);
 }
 
 form a {
   color: rgb(64, 94, 71);
-  background-color: rgb(5, 48, 85);
+  background-color: rgb(209, 233, 205);
   text-decoration: none;
   margin: 0;
   padding: 5px 10px;
   border-radius: 2px;
+}
+form h1 {
+  padding: 1%;
+  font-size: 8em;
+  color: blue;
+  text-shadow: 3px 3px 3px greenyellow;
 }
 
 input {
@@ -170,10 +180,9 @@ input {
 }
 
 input[type=text], [type=password], [type=date] {
-    width: 70%;
-    background-color: gainsboro;
-    padding: 10px 20px;
-    margin: 10px auto;
+    width: 95%;
+    background-color: greenyellow;
+    margin: 5px auto;
     border: none;
     box-shadow: inset 5px 5px 5px 0 rgb(59, 63, 59);
     font-size: 15px;
@@ -248,4 +257,22 @@ footer a:hover {
 
 .columnb p {
   padding-left: 20px;
+}
+
+
+/* question form */
+
+
+#questions {
+  list-style: none;
+  display: table;
+  margin: 0 auto;
+}
+
+.question {
+  width: 500px;
+  margin: 30px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
 }

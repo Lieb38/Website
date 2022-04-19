@@ -14,7 +14,7 @@ function login(e) {
   .then((data) => {
     if(!data.message) {
       setCurrentUser(data);
-      window.location.href = "bmi.html";
+      window.location.href = "questions.html";
     }
   })
   .catch((error) => {
@@ -42,18 +42,21 @@ function register(e) {
   })
   .catch((error) => {
     const errText = error.message
+    document.querySelector("#registerForm p.error").innerHTML = errText;
+    document.getElementById("pswd").value = "";
+    console.log(`Error! ${errText}`)
   })
 
   fetchData('/users/register', {username: name, password: pswd}, "POST")
   .then((data) => {
     if(!data.message) {
       setCurrentUser(data);
-      window.location.href = "bmi.html";
+      window.location.href = "questions.html";
     }
   })
   .catch((error) => {
     const errText = error.message;
-    document.querySelector("#reg-form p.error").innerHTML = errText;
+    document.querySelector("#registerForm p.error").innerHTML = errText;
     document.getElementById("pswd").value = "";
     console.log(`Error! ${errText}`)
   });

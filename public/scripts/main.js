@@ -76,16 +76,6 @@ class User {
   //   }
   // ]
   
-  // let getUsers = () => users;
-
-  // function login(username, password) {
-  //   const user = users.filter((u) => u.userName === username);
-  //   if(!user[0]) throw Error('User not Found.');
-  //   if(user[0].password !== password) throw Error ('Password is incorrect.')
-
-  //   return user[0];
-  // }
-  // module.exports = {getUsers, login};
 
   ////////////////////////////////////////////////////////////////////////////
 
@@ -108,21 +98,37 @@ class User {
         console.log(newUser);
     }
 
-const usersBtn = document.getElementById("users-btn");
-usersBtn.addEventListener('click', getUsers);
+
+    // login code
+  // let getUsers = () => users;
+
+  // function login(username, password) {
+  //   const user = users.filter((u) => u.userName === username);
+  //   if(!user[0]) throw Error('User not Found.');
+  //   if(user[0].password !== password) throw Error ('Password is incorrect.')
+
+  //   return user[0];
+  // }
+  // module.exports = {getUsers, login};
+
+
+
+      // user button
+// const usersBtn = document.getElementById("users-btn");
+// usersBtn.addEventListener('click', getUsers);
     
-function getUsers() {
-  fetch("http://localhost:3000/users")
-  .then((res) => res.json())
-  .then((data) => {
-    let ul = document.getElementById("allUsers");
-    data.forEach((user) => {
-      let li = document.createElement('li');
-      let text = document.createTextNode(user.userName);
-      li.appendChild(text);
-      ul.appendChild(li);
-    })
-    console.log(data);
-  })
-  .catch((err) => console.log(`Error! ${err}`));
-}
+// function getUsers() {
+//   fetch("http://localhost:3000/users")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     let ul = document.getElementById("allUsers");
+//     data.forEach((user) => {
+//       let li = document.createElement('li');
+//       let text = document.createTextNode(user.userName);
+//       li.appendChild(text);
+//       ul.appendChild(li);
+//     })
+//     console.log(data);
+//   })
+//   .catch((err) => console.log(`Error! ${err}`));
+// }

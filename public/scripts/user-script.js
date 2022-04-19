@@ -37,6 +37,7 @@ function register(e) {
   postData('/users/register', {username: name, password: pswd})
   .then((data) => {
     if(!data.message) {
+      setCurrentUser(data) // new
       window.location.href = "questions.html";
     }
   })
@@ -61,3 +62,25 @@ function register(e) {
     console.log(`Error! ${errText}`)
   });
 }
+
+function setCurrentUser(user) { /// new!!
+  localStorage.setItem('user', JSON.stringify(user));
+}
+
+function getCurrentUser() {
+  return JSON.parse(localStorage.getItem('user'));
+}
+
+function removeCurrentUser() {
+  localStorage.removeItem('user');
+}
+
+document.getElementById("logout").addEventListener('click', logout);
+
+function logout() {
+  removeCurrentUser();
+  window.location.href = "home.html"
+}
+
+//const user = getCurrentUser();
+//console.log(use.userName);

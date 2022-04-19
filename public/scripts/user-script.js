@@ -25,7 +25,7 @@ function login(e) {
   });
 }
 
-const regForm = document.getElementById("reg-form");
+const regForm = document.getElementById("registerForm");
 if(regForm) regForm.addEventListener('submit', register);
 
 function register(e) {
@@ -33,6 +33,16 @@ function register(e) {
 
   const name = document.getElementById("username").value;
   const pswd = document.getElementById("pswd").value;
+  
+  postData('/users/register', {username: name, password: pswd})
+  .then((data) => {
+    if(!data.message) {
+      window.location.href = "questions.html";
+    }
+  })
+  .catch((error) => {
+    const errText = error.message
+  })
 
   fetchData('/users/register', {username: name, password: pswd}, "POST")
   .then((data) => {

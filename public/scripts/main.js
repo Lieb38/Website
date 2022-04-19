@@ -15,7 +15,7 @@ function addUser(e) {
 
   const newUser = new User(Id, userName, pswd);
   console.log(newUser);
-    }
+  }
 
 
 

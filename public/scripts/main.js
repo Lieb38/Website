@@ -1,3 +1,24 @@
+
+let form = document.getElementById("registerForm");
+//let userId = document.getElementById("questions")
+
+// 2
+form.addEventListener('submit', addUser);
+
+// 3
+function addUser(e) {
+  e.preventDefault();
+// 4
+  let Id = document.getElementById("Id").value;
+  let userName = document.getElementById("username").value;
+  let pswd = document.getElementById("pswd").value;
+
+  const newUser = new User(Id, userName, pswd);
+  console.log(newUser);
+    }
+
+
+
 class User {
     constructor(id, userName, pswd) {
       this.userId = id;
@@ -79,24 +100,6 @@ class User {
 
   ////////////////////////////////////////////////////////////////////////////
 
-    let form = document.getElementById("registerForm");
-    //let userId = document.getElementById("questions")
-
-    // 2
-    form.addEventListener('submit', addUser);
-
-    // 3
-    function addUser(e) {
-        e.preventDefault();
-        // 4
-        let Id = document.getElementById("Id").value;
-
-        let userName = document.getElementById("username").value;
-        let pswd = document.getElementById("pswd").value;
-
-        const newUser = new User(Id, userName, pswd);
-        console.log(newUser);
-    }
 
 
     // login code

@@ -46,13 +46,13 @@ function addQuestion(e) {
     label.setAttribute("for", "answer")
    //
     inputSubmit.setAttribute("type","submit")
-    inputSubmit.setAttribute("value","submit")
+    inputSubmit.setAttribute("value","answer")
 
     // 7 add text
     //li.appendChild(document.createTextNode(question));
     form.appendChild(h3)
-    h3.innerHTML = document.getElementById("question").value;
-    label.innerHTML = document.createTextNode("question")
+    h3.innerHTML = document.getElementById("question").value + "?";
+    label.innerHTML = `type answer below...`
     form.appendChild(label)
     form.appendChild(inputText)
     form.appendChild(inputSubmit)
@@ -89,7 +89,17 @@ form2.addEventListener('submit', addAnswer);
      console.log(newAnswer);
      // 5
      
-     let Ah3 = document.createElement('h3');
+    form2.innerHTML = `
+    <form id="questionForm">
+        <label for="question"><b>Question</b></label>
+        <input type="text" id="question" required>
+        <input type="submit" value="Ask">
+    </form>
+    
+    `
+
+     //let Ah3 = document.createElement('h3');
+
    //  let label2 = document.createElement('label')
    //  let inputText2 = document.createElement('input');
     // let inputSubmit2 = document.createElement('input');
@@ -97,7 +107,7 @@ form2.addEventListener('submit', addAnswer);
      // 6 style
      //li.className = 'question';
      //
-     form2.className = 'question';
+    // form2.className = 'question';
      //
     // inputText2.setAttribute("id","answer")
     // inputText2.setAttribute("type","text")
@@ -108,16 +118,16 @@ form2.addEventListener('submit', addAnswer);
  
      // 7 add text
      //li.appendChild(document.createTextNode(question));
-     form2.appendChild(Ah3)
-     Ah3.innerHTML = document.getElementById("answer").value;
+ //    form2.appendChild(Ah3)
+ //    Ah3.innerHTML = document.getElementById("answer").value;
      //label2.innerHTML = document.createTextNode("question")
-     form2.appendChild(label2)
-     form2.appendChild(inputText2)
-     form2.appendChild(inputSubmit2)
+ //    form2.appendChild(label2)
+//     form2.appendChild(inputText2)
+//     form2.appendChild(inputSubmit2)
      //input2.appendChild(document.createElement())
      // 8 append li to questions list
      //questions.appendChild(li);
-     questions.appendChild(form2);
+     answers.appendChild(form2);
      //questions.appendChild(inputText);
      //questions.appendChild(inputSubmit);
  

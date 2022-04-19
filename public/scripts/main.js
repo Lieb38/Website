@@ -67,35 +67,25 @@ class User {
     }
   }
   
-  let user1 = new User(12345, "coolGuy23", "wordD12@");
-  console.log(user1);
-  console.log(user1.getUserId());
+  // const users = [
+  //   {
+  //     userName: "spat",
+  //     firstName: "joe",
+  //     lastName: "mamma",
+  //     password: 0
+  //   }
+  // ]
   
-  let user2 = new User(15555, "cathy2000", "bfdd_ejJr42");
-  console.log(user2)
-  console.log(user2.getUserName());
-  
-  user2.setUserPassword("frgd@");
-  ///////
-  const users = [
-    {
-      userName: "spat",
-      firstName: "joe",
-      lastName: "mamma",
-      password: 0
-    }
-  ]
-  
-  let getUsers = () => users;
+  // let getUsers = () => users;
 
-  function login(username, password) {
-    const user = users.filter((u) => u.userName === username);
-    if(!user[0]) throw Error('User not Found.');
-    if(user[0].password !== password) throw Error ('Password is incorrect.')
+  // function login(username, password) {
+  //   const user = users.filter((u) => u.userName === username);
+  //   if(!user[0]) throw Error('User not Found.');
+  //   if(user[0].password !== password) throw Error ('Password is incorrect.')
 
-    return user[0];
-  }
-  module.exports = {getUsers, login};
+  //   return user[0];
+  // }
+  // module.exports = {getUsers, login};
 
   ////////////////////////////////////////////////////////////////////////////
 

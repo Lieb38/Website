@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Questions</title>
 </head>
 <body>
@@ -18,8 +18,8 @@
                 <!-- Nav -->
                 <nav>
                     <ul>
-                        <li><a href="../home.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a class="dropdown" href="#projects">Projects</a>
                             <ul class="content">
                                 <li><a href="#project1">project 1</a></li>
@@ -36,7 +36,7 @@
 
             <footer>
                 <h3>Lieb Mathieson &reg;</h3>
-                <a class="login" href="../register.html">sign in</a>
+                <a class="login" href="register.html">sign in</a>
             </footer>
           </div> <!--  end of column a -->
          
@@ -49,11 +49,11 @@
         
         <!-- beginning column 2 -->
 
-        <h1>Ask a Question!</h1>
+        <h1 class="qH1">Ask a Question!</h1>
         <form id="questionForm">
             <label for="question"><b>Question</b></label>
             <input type="text" id="question" required>
-            <input type="submit" value="Add">
+            <input type="submit" value="Ask">
         </form>
 
         <div id="questions">
@@ -62,8 +62,13 @@
             <!-- <input type="text" id="question" required> -->
             <!-- <input type="submit" value="Add"> -->
         </div>
+        <div id ="answers">
+
+
+        </div>
     </main>
     </div> 
-    <script src="dom.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/questions.js"></script>
 </body>
 </html>

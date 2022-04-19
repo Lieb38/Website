@@ -47,7 +47,8 @@
            <main> <!-- Main Sections -->
                     <!-- Form -->
                     <form id="login-form">
-                        <h1>Login</h2>
+                        <p class="error"></p>
+                        <h1 class="formH1">Login</h2>
                         <br>
                         <label for="username">Username</label>
                         <input type="text" placeholder="Enter Username" id="username" name="username">
@@ -56,10 +57,13 @@
                         <input type="password" placeholder="Enter Password" id="pswd" name="pswd">
                         <br>
                         <input type="submit" value="login">
+                        <br>
+                        <p>Don't already have an account? <a href="register.html">register</a></p>
                     </form>
             </main>
         </div>
     </div> 
-    <script src="main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/user-script.js"></script>
 </body>
 </html>

@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
+const path = require('path');
+const userRoutes = require('../../server/routes/user'); // edit to fix
 
-const userRoutes = require('../../server/routes/user');
+app.use(express.json());
+app.use(express.static(__dirname + "/public"));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname,'/public/home.html'));
 
 //CORS middleware
 app.use(function(req, res, next) {
@@ -13,7 +17,7 @@ app.use(function(req, res, next) {
 
 app.use("/users", userRoutes);
 
-app.get('*', function (req, res) {
+app.get('*', function (req, res) {  /// edit w/ new code on slide 19 // rest 2
   res.sendFile(path.resolve(__dirname, 'public', 'bmi.html'));
 });
 

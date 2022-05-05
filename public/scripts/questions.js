@@ -1,3 +1,5 @@
+/// look on bmi-app-main/ profile.js to see innerhtml injection w/ string literals
+
 let qAmount = 0;
 let aAmount = 0;
 

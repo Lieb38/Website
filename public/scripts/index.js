@@ -5,7 +5,7 @@ const userRoutes = require('../../server/routes/user'); // edit to fix
 
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
-app.get('/', (req, res) => res.sendFile(path.join(__dirname,'/public/home.html'));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname,'/public/home.html')));
 
 //CORS middleware
 app.use(function(req, res, next) {
